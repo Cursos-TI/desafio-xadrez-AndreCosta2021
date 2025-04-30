@@ -14,7 +14,7 @@ int main() {
 
     // Variáveis para coletar as informações das movimentações das peças tanto na vertical (_vert) 
     // quanto na horizontal (_hor)
-    int bispo_vert, bispo_hor, rainha_vert, rainha_hor, torre_vert, torre_hor, mov_bispo, mov_rainha, mov_torre;
+    int bispo_vert, bispo_hor, rainha_vert, rainha_hor, torre_vert, torre_hor, mov_bispo, mov_rainha, mov_torre, cavalo_vert, cavalo_hor;
 
     // Inicialização das variáveis
     bispo_vert = 5;
@@ -26,6 +26,8 @@ int main() {
     mov_bispo = 0;
     mov_rainha = 0;
     mov_torre = 0;
+    cavalo_vert = -2;
+    cavalo_hor = 1;
 
     // Implementação de Movimentação do Bispo
     // Escolhido para a movimentação do Bispo a estrutura de repetição while
@@ -111,8 +113,20 @@ int main() {
         };
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    // Treino de loops aninhados, sendo obrigatoriamente um deles FOR
+
+    printf("\nO movimento do cavalo foi: \n");
+    
+    do {
+
+        for (cavalo_vert = 1; cavalo_vert <= 2; cavalo_vert++)
+        {
+            printf("Baixo\n");
+        }
+        printf("Direita\n");
+        cavalo_hor--;
+
+    } while (cavalo_hor > 0);
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
